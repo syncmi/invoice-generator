@@ -376,13 +376,4 @@ function printInvoice() {
     previewFrame.contentWindow.print();
   };
 
-  // Remove the iframe
-  setTimeout(function () {
-    var con = confirm("Reload in process!");
-    if (con) {
-      location.reload();
-    } else {
-      location.reload();
-    }
-  }, 1000);
 }
