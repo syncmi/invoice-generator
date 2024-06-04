@@ -318,6 +318,7 @@ function deleteTerm(id) {
 }
 
 function printInvoice() {
+  
   const elements = document.getElementsByClassName("delete-ico-bill");
   while (elements.length > 0) {
     elements[0].parentNode.removeChild(elements[0]);
@@ -326,12 +327,12 @@ function printInvoice() {
   cell.colSpan = 2;
 
   var terms = document.getElementById("invoice-terms").innerText;
-  if (terms == "") {
+  if (terms && terms == "") {
     document.getElementById("invoice-terms-h").remove();
   }
 
   var notes = document.getElementById("invoice-note").innerText;
-  if (notes == "") {
+  if (notes && notes == "") {
     document.getElementById("invoice-note-h").remove();
   }
 
