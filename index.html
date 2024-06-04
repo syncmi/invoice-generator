@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Syncmi Invoice Generator</title>
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.ico" rel="icon" />
+    <link href="assets/img/favicon.ico" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet" />
+    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet" />
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+      <div class="d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img
+            src="assets/img/syncmi dark text.png"
+            alt="Syncmi Web Solutions Logo"
+          />
+          <!-- <span class="d-none d-lg-block">Syncmi Web Solutions</span> -->
+        </a>
+      </div>
+      <!-- End Logo -->
+
+      <!-- <div class="search-bar">
+        <form
+          class="search-form d-flex align-items-center"
+          method="POST"
+          action="#"
+        >
+          <input
+            type="text"
+            name="query"
+            placeholder="Search"
+            title="Enter search keyword"
+          />
+          <button type="submit" title="Search">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+      </div> -->
+      <!-- End Search Bar -->
+
+      <nav class="header-nav ms-auto">
+        <ul class="d-flex align-items-center">
+          <!-- <li class="nav-item d-block d-lg-none">
+            <a class="nav-link nav-icon search-bar-toggle" href="#">
+              <i class="bi bi-search"></i>
+            </a>
+          </li> -->
+          <!-- End Search Icon-->
+
+          <!-- <li class="nav-item">
+            <a
+              class="nav-link nav-icon"
+              data-bs-toggle="modal"
+              data-bs-target="#addShop"
+            >
+              <i class="bi bi-houses-fill"></i>
+            </a>
+          </li> -->
+
+          
+          <li class="nav-item">
+            <a class="nav-link nav-icon" href="#">
+              <i class="bi bi-list toggle-sidebar-btn"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- End Icons Navigation -->
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+      <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-heading">Free Services</li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#">
+            <span>Invoice Genarator</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            target="_blank"
+            href="https://calendly.com/syncmiusercare/consulting"
+          >
+            <span>Consulting</span>
+          </a>
+        </li>
+
+        <!-- <li class="nav-item">
+          <a class="nav-link collapsed" href="stock-in.html">
+            <i class="bi bi-person"></i>
+            <span>To-Do App</span>
+          </a>
+        </li>  -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="https://sample-aurora.web.app">
+            <!-- <i class="bi bi-person"></i> -->
+            <span>Aurora - An AI for Web</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <!-- End Sidebar-->
+
+    <main id="main" class="main">
+      <div class="pagetitle">
+        <h1>Free Invoice Generator</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item active"><a data-bs-toggle="modal"
+              data-bs-target="#sampleInvoice">View Sample Invoice</a></li>
+            <li class="breadcrumb-item active"><a data-bs-toggle="modal"
+              data-bs-target="#viewManual">View Manual</a></li>
+          </ol>
+        </nav>
+      </div>
+      <!-- End Page Title -->
+
+      <!-- Modal - Sample Invoice -->
+      <div
+        class="modal fade"
+        id="sampleInvoice"
+        tabindex="-1"
+        aria-labelledby="sampleInvoice"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5">Sample Invoice</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              
+              <div class="row">
+                <div>
+                  <center>
+                    <div class="print-bill-head">
+                      <h2>Invoice</h2>
+                    </div>
+                  </center>
+                  <div class="print-bill-cus">
+                    <p>From: <span>Company Name</span></p>
+                    <p>Name: <span>Jane Doe</span></p>
+                    <p>Phone: <span>+91 9876543210</span></p>
+                    <p>Address: <span>4, xyz street, city</span></p>
+                    <p>
+                      GST No: <span>AAAA1234AAAAINVS</span>
+                    </p>
+                  </div>
+                  <hr />
+                  <div class="print-bill-cus">
+                    <p>To: <span>Client Company Name</span></p>
+                    <p>Name: <span>Client Name</span></p>
+                    <p>Phone: <span>+91 1234567890</span></p>
+                    <p>Address: <span>7, zyx street, city</span></p>
+                    <p>Bill ID: <span>5678</span></p>
+                    <br>
+                  </div>
+                  <div class="col">
+                    <div class="table-responsive">
+                      <table
+                        class="table table-bordered border-dark"
+                      >
+                        <thead>
+                          <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Rate</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Logo</td>
+                            <td>1000</td>
+                            <td>1</td>
+                            <td>1000</td>
+                          </tr>
+                          <tr>
+                            <td>Website</td>
+                            <td>6999</td>
+                            <td>1</td>
+                            <td>6999</td>
+                          </tr>
+                          <tr>
+                            <td>Domain</td>
+                            <td>2000</td>
+                            <td>1</td>
+                            <td>2000</td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <th colspan="2">
+                            Total Items: <span>3</span>
+                          </th>
+                          <th colspan="2">
+                            Amount: <span>9999</span>
+                          </th>
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="print-bill-cus">
+                    <p>
+                      <strong>Terms: </strong><br /><span>
+                        <ul>
+                          <li>50% of the payment must be made before the project starts.</li>
+                          <li>Any additional tasks or work not specified above will incur an extra charge.</li>
+                          <li>Only minor corrections will be made after the website is completed.</li>
+                        </ul>
+                      </span>
+                    </p>
+                    <p>
+                      <strong>Note: </strong><br />
+                      <span>
+                        <ul>
+                          <li>The amount mentioned above is in Indian Rupees.</li>
+                          <li>Make sure to explain the necessity of your project.</li>
+                        </ul>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="modal-footer p-4">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal - Sample Invoice -->
+      <div
+        class="modal fade"
+        id="viewManual"
+        tabindex="-1"
+        aria-labelledby="viewManual"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5">Manual</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li><b>Personal Details:</b> Click the Person Up Float button to open a modal, fill in your details, and click "Add." Unfilled fields won't appear in the invoice.</li>
+                <li><b>Client Details:</b> Click the Person Down Float button to open a modal, fill in your client's details, and click "Add." Unfilled fields won't appear in the invoice.</li>
+                <li><b>Add Invoice Items:</b> Click the File Add button to open a modal and add your invoice items.</li>
+                <li><b>Edit/Delete Items:</b> After adding items, click the respective cells in the invoice table to edit or delete them.</li>
+                <li><b>Add Terms:</b> Click "Terms" to open an alert box, add your terms, and click the created terms to delete them.</li>
+                <li><b>Add Notes:</b> Click "Note" to open an alert box, add your notes, and click the created notes to delete them.</li>
+              </ul>              
+            </div>
+            <div class="modal-footer p-4">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal - add Item -->
+      <div
+        class="modal fade"
+        id="addItem"
+        tabindex="-1"
+        aria-labelledby="addItem"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5">Add Item</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body d-flex justify-content-center">
+              <form
+                id="addItemForm"
+                class="col-10 d-flex flex-column justify-content-center p-3 iteminputs"
+                action="javascript:addItem()"
+              >
+                <input
+                  class="form-control"
+                  type="text"
+                  name="itemName"
+                  placeholder="Item Name"
+                  id="itemName"
+                  required
+                />
+                <br />
+                <input
+                  class="form-control"
+                  type="number"
+                  name="itemRate"
+                  placeholder="Item Rate"
+                  id="itemRate"
+                  required
+                />
+                <br />
+                <input
+                  class="form-control"
+                  type="number"
+                  name="itemQty"
+                  placeholder="Item Quantity"
+                  id="itemQty"
+                  required
+                />
+                <br />
+                <input
+                  class="form-control"
+                  type="number"
+                  name="itemPrice"
+                  placeholder="Item Price"
+                  id="itemPrice"
+                  required
+                />
+                <br />
+                <button type="submit" class="btn btn-primary">Add Item</button>
+              </form>
+            </div>
+            <div class="modal-footer p-4">
+              <div class="col-12">
+                <p class="small mb-0 text-success" id="addItemModal-alert"></p>
+              </div>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal - add Myself -->
+      <div
+        class="modal fade"
+        id="addMyself"
+        tabindex="-1"
+        aria-labelledby="addMyself"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5">My Details</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body d-flex justify-content-center">
+              <form
+                id="addMyselfForm"
+                class="col-10 d-flex flex-column justify-content-center p-3 iteminputs"
+                action="javascript:addMyself()"
+              >
+                <input
+                  class="form-control"
+                  type="text"
+                  name="companyName"
+                  placeholder="Company Name"
+                  id="companyName"
+                />
+                <br />
+                <input
+                  class="form-control"
+                  type="text"
+                  name="yourName"
+                  placeholder="Your Name"
+                  id="yourName"
+                />
+                <br />
+                <input
+                  class="form-control"
+                  type="text"
+                  name="YourPhone"
+                  placeholder="Your Phone"
+                  id="yourPhone"
+                  minlength="10"
+                  maxlength="16"
+                />
+                <br />
+                <textarea
+                  class="form-control"
+                  type="text"
+                  name="yourAddress"
+                  placeholder="Your Address"
+                  id="yourAddress"
+                  rows="3"
+                ></textarea>
+                <br />
+                <input
+                  class="form-control"
+                  type="text"
+                  name="YourGST"
+                  placeholder="GST Number"
+                  id="yourGST"
+                />
+                <br />
+                <button type="submit"
+                data-bs-dismiss="modal"
+                aria-label="Close" class="btn btn-primary">Set My Details</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal - add Client -->
+      <div
+        class="modal fade"
+        id="addClient"
+        tabindex="-1"
+        aria-labelledby="addClient"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5">Client Details</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body d-flex justify-content-center">
+              <form
+                id="addClientForm"
+                class="col-10 d-flex flex-column justify-content-center p-3 iteminputs"
+                action="javascript:addClient()"
+              >
+                <input
+                  class="form-control"
+                  type="text"
+                  name="clientCompanyName"
+                  placeholder="Client Company Name"
+                  id="clientCompanyName"
+                />
+                <br />
+                <input
+                  class="form-control"
+                  type="text"
+                  name="clientName"
+                  placeholder="Client Name"
+                  id="clientName"
+                />
+                <br />
+                <input
+                  class="form-control"
+                  type="text"
+                  name="clientPhone"
+                  placeholder="Client Phone"
+                  id="clientPhone"
+                  minlength="10"
+                  maxlength="16"
+                />
+                <br />
+                <textarea
+                  class="form-control"
+                  type="text"
+                  name="clientAddress"
+                  placeholder="Client Address"
+                  id="clientAddress"
+                  rows="3"
+                ></textarea>
+                <br />
+                <input
+                  class="form-control"
+                  type="text"
+                  name="clientBillid"
+                  placeholder="Bill ID"
+                  id="clientBillid"
+                />
+                <br />
+                <button type="submit"
+                data-bs-dismiss="modal"
+                aria-label="Close" class="btn btn-primary">Set Client Details</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="row align-items-top">
+          <div class="container">
+            <br />
+
+            <hr />
+
+            <div class="row" id="printing-bill">
+              <div class="dummy-print">
+                <center>
+                  <div class="print-bill-head">
+                    <h2>Invoice</h2>
+                  </div>
+                </center>
+                <div class="print-bill-cus">
+                  <p id="seller-from-h">From: <span id="seller-from"></span></p>
+                  <p id="seller-name-h">Name: <span id="seller-name"></span></p>
+                  <p id="seller-phone-h">Phone: <span id="seller-phone"></span></p>
+                  <p id="seller-address-h">Address: <span id="seller-address"></span></p>
+                  <p  id="seller-gst-h">
+                    GST No: <span id="seller-gst"></span>
+                  </p>
+                </div>
+                <hr />
+                <div class="print-bill-cus">
+                  <p id="client-to-h">To: <span id="client-to"></span></p>
+                  <p id="client-name-h">Name: <span id="client-name"></span></p>
+                  <p id="client-phone-h">Phone: <span id="client-phone"></span></p>
+                  <p id="client-address-h">Address: <span id="client-address"></span></p>
+                  <p id="billid-h">Bill ID: <span id="billid"></span></p>
+                  <br>
+                </div>
+                <div class="col">
+                  <div class="table-responsive">
+                    <table
+                      class="table table-bordered border-dark"
+                      id="invoiceTable"
+                    >
+                      <thead>
+                        <tr id="invoice-table-head">
+                          <th scope="col">Item</th>
+                          <th scope="col">Rate</th>
+                          <th scope="col">Qty</th>
+                          <th scope="col">Price</th>
+                          <th class="delete-ico-bill" scope="col">
+                            <i class="bi bi-trash-fill"></i>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody id="table-invoice-items"></tbody>
+                      <tfoot>
+                        <th colspan="2">
+                          Total Items: <span id="total-invoice-items"></span>
+                        </th>
+                        <th colspan="3" id="change-colspan">
+                          Amount: <span id="total-invoice-amount"></span>
+                        </th>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+                <div class="print-bill-cus">
+                  <p id="invoice-terms-h">
+                    <strong onclick="addTerm()">Terms: </strong><br /><span>
+                      <ul id="invoice-terms">
+                      </ul>
+                    </span>
+                  </p>
+                  <p id="invoice-note-h">
+                    <strong onclick="addNote()">Note: </strong><br />
+                    <span>
+                      <ul id="invoice-note">
+                      </ul>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <center>
+              <button
+                id="printBtn"
+                class="btn btn-primary"
+                onclick="printInvoice()"
+              >
+                Print</button
+              ><br />
+              <a
+                href="javascript:whatsappBill()"
+                class="invisible"
+                id="whatsappLink"
+                >Send the Whatsapp Bill</a
+              >
+            </center>
+          </div>
+
+          <!-- My Table Code Ends-->
+        </div>
+      </section>
+      <section>
+        <div class="row">
+          <div class="col">
+            <iframe width="100%" height="0px" id="iframePrint"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Billing Section End -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Syncmi Web Solutions</span></strong
+        >. All Rights Reserved
+      </div>
+      <div class="credits">
+        Developed by <a href="https://syncmi.web.app/">Syncmi Web Solutions</a
+        ><br /><br />
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a
+      data-bs-toggle="modal"
+      data-bs-target="#addItem"
+      class="add-invoice-item d-flex align-items-center justify-content-center active"
+    >
+      <i class="bi bi-file-earmark-plus-fill"></i
+    ></a>
+
+    <a
+    data-bs-toggle="modal"
+    data-bs-target="#addClient"
+    onclick="showClientDetails()"
+      class="add-myself d-flex align-items-center justify-content-center active"
+      ><i class="bi bi-person-fill-down"></i
+    ></a>
+
+    <a
+    data-bs-toggle="modal"
+    data-bs-target="#addMyself"
+    onclick="showMyDetails()"
+      class="add-client d-flex align-items-center justify-content-center active"
+      ><i class="bi bi-person-fill-up"></i
+    ></a>
+
+    <!-- Preloader -->
+    <!-- <div id="preloader"></div> -->
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="assets/vendor/echarts/echarts.min.js"></script>
+    <script src="assets/vendor/quill/quill.min.js"></script>
+    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script defer src="assets/js/free-invoice.js"></script>
+  </body>
+</html>
